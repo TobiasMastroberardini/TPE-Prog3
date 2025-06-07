@@ -17,17 +17,17 @@ public class BacktrackingSolver {
 
     public static Solution solve(List<Machine> machines, int target) {
         List<String> currentSequence = new ArrayList<>();
-        Solution bestSolution = null;
+        Solution[] bestSolution = { null }; // Usamos un array para simular "paso por referencia"
         statesGenerated = 0;
 
         backtrack(machines, target, currentSequence, 0, 0, bestSolution);
-        return bestSolution;
+        return bestSolution[0];
     }
 
     private static void backtrack(List<Machine> machines, int target,
             List<String> currentSequence,
             int currentPieces, int activations,
-            Solution bestSolution) {
+            Solution[] bestSolution) {
         statesGenerated++;
 
         // Estado final no solución
@@ -37,8 +37,8 @@ public class BacktrackingSolver {
 
         // Estado solución
         if (currentPieces == target) {
-            if (bestSolution == null || activations < bestSolution.getActivations()) {
-                bestSolution = new Solution(new ArrayList<>(currentSequence), currentPieces, activations);
+            if (bestSolution[0] == null || activations < bestSolution[0].getActivations()) {
+                bestSolution[0] = new Solution(new ArrayList<>(currentSequence), currentPieces, activations);
             }
             return;
         }
