@@ -5,5 +5,5 @@
 <h3>Tobias Mastroberardini</h3>
 <h4>tmastroberardini@alumnos.exa.unicen.edu.ar</h4>
 
-<h2>Joaquin Block</h4>
-<h3>joaquin.block@gmail.com</h3>
+<h4>Joaquin Block</h4>
+<h5>joaquin.block@gmail.com</h5>
