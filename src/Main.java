@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             // Leer archivo de entrada
-            String filePath = "resources/input.txt";
+            String filePath = "TPE-Prog3-main\\resources\\input.txt";
             List<Machine> machines = new ArrayList<>();
             int targetPieces = 0;
 
